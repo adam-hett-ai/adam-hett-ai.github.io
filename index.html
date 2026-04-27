@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h1>Your Name</h1>
+      <p>A short bio about yourself. What you do, what you're interested in, and what you're working towards.</p>
+    </section>
+
+    <section id="projects" class="hidden">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Project One</h3>
+          <p>A short description of what this project is and what you learned from it.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project Two</h3>
+          <p>A short description of what this project is and what you learned from it.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project Three</h3>
+          <p>A short description of what this project is and what you learned from it.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('main section').forEach(s => s.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Your Name</p>
+  </footer>
+</body>
+</html>
